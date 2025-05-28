@@ -1,0 +1,370 @@
+/* ========================= START ========================= */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+  }
+  
+  /* ========================= NAVBAR ========================= */
+
+
+
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 0 20px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d6a3ff;
+  }
+  
+  .meu-nome {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a259ff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a,
+  .topnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .topnav a:hover {
+    color: #a259ff;
+  }
+  
+  .topnav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+  }
+  
+  /* ========================= LOGO ========================= */
+
+
+
+  .logo-topo {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 25px;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  /* ========================= SECTIONS ========================= */
+
+
+  
+  header, section {
+    padding-top: 120px;
+    scroll-margin-top: 120px;
+  }
+  
+  section {
+    margin-bottom: 150px;
+  }
+  
+  .intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* ========================= SOBRE MIM ========================= */
+
+
+
+  .sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    
+  }
+  
+  .sobre-mim .texto {
+    flex: 1;
+  }
+  
+  .sobre-mim .texto h2 {
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .sobre-mim .texto p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .sobre-mim .foto {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .sobre-mim .foto img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  /* ========================= PROJETOS ========================= */
+
+
+
+  .swiper {
+    width: 100%;
+    padding: 50px 0;
+  }
+  
+  .swiper-wrapper {
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .swiper-slide img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .swiper-slide-active img {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  .swiper-slide-next img,
+  .swiper-slide-prev img {
+    transform: scale(0.9);
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    background-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: #777;
+    transform: scale(1.1);
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 20px;
+  }
+  
+  /* ========================= CONTATO ========================= */
+
+
+
+  #contato {
+    scroll-margin-top: 120px;
+    margin-top: 120px;
+  }
+  
+  .contato {
+    background-color:#000000;
+    padding: 60px 20px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .contato h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contato input,
+  .contato textarea {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    color: #fff;
+    transition: border 0.3s;
+  }
+  
+  .contato input:focus,
+  .contato textarea:focus {
+    border: 1px solid #000000;
+    outline: none;
+  }
+  
+  .contato input::placeholder,
+  .contato textarea::placeholder {
+    color: #888;
+  }
+  
+  .contato button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contato button:hover {
+    background-color:#a259ff;
+  }
+
+  .contato-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 350px; 
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; 
+}
+
+
+.formulario {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-contato {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: transparent; 
+}
+
+.info-contato h3 {
+  font-size: 24px;
+  color: #cdaef7;
+  margin-bottom: 20px;
+}
+
+.info-contato a,
+.info-contato a:visited {
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none !important;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.info-contato a:hover {
+  color: #a259ff !important;
+  text-decoration: underline !important;
+}
+  
+  /* ========================= FOOTER ========================= */
+
+
+  
+  footer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+  }
+  
+  footer img:hover {
+    transform: scale(1.1);
+  }
+  
